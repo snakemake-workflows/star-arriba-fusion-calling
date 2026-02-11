@@ -84,7 +84,7 @@ params:
       #       info around (for example for better realignment of breakpoints or
       #       visualisation of alignments); this parameter is set in the
       #       wrapper call in workflow/rules/mapping.smk
-      extra: |
+      extra: >
         --outFilterMultimapNmax 50
         --peOverlapNbasesMin 10
         --alignSplicedMateMapLminOverLmate 0.5

@@ -21,7 +21,7 @@ rule star_align:
             "--quantMode GeneCounts "
             f"--sjdbGTFfile {input.annotation} "
             f"{get_star_read_group(wc)} "
-            f'{lookup(within= config, dpath= "params/star/align/extra", default= "")}'
+            f'{lookup(within= config, dpath= "params/star/align/extra", default= "").rstrip()}'
         ),
     threads: 8
     wrapper:
