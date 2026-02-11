@@ -1,3 +1,6 @@
+.test/results/**
+.test/resources/**
+.test/logs/**
 results/**
 resources/**
 logs/**
