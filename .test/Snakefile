@@ -48,22 +48,9 @@ rule download_test_data:
         ") > {log} 2>&1"
 
 
-rule download_expected_result:
-    output:
-        tsv="<results>/expected/fusions.tsv",
-    log:
-        "<logs>/expected/fusions.tsv",
-    conda:
-        "../workflow/envs/wget.yaml"
-    shell:
-        "( wget https://github.com/suhrig/arriba/raw/02bfd7d359130f653bbdad8563bcf3d03ee4b029/test/fusions.tsv; "
-        "  mv fusions.tsv {output.tsv}; "
-        ") > {log} 2>&1"
-
-
 rule validate_output:
     input:
-        expected="<results>/expected/fusions.tsv",
+        expected="<resources>/expected_fusion.GRCh38.tsv",
         called="<results>/arriba_fusions/{sample}/{sample}.tsv",
     output:
         "<results>/validate_output/{sample}.validated.txt",
