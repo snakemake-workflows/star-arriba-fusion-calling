@@ -5,8 +5,11 @@ ref:
   species: homo_sapiens
   release: "115"
   build: GRCh38
+  # Any chromosomes listed here must also be listed under params: arriba:
+  # extra: with the -i flag. Otherwise, Arriba will complain about missing
+  # contigs.
   chromosome:
-    - "8"
+    - "9"
     - "22"
 
 params:
@@ -15,7 +18,7 @@ params:
       sjdbOverhang: 100
       extra: ""
     align:
-      extra: |
+      extra: >
         --outFilterMultimapNmax 50
         --peOverlapNbasesMin 10
         --alignSplicedMateMapLminOverLmate 0.5
@@ -30,4 +33,4 @@ params:
   arriba:
     custom_blacklist: ""
     custom_known_fusions: ""
-    extra: ""
+    extra: "-i 9,22"
