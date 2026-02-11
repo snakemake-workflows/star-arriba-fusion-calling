@@ -58,5 +58,7 @@ snakemake --cores 2 --sdm conda --directory .test
 ## References
 
 > Dobin, A., Davis, C. A., Schlesinger, F., Drenkow, J., Zaleski, C., Jha, S., Batut, P., Chaisson, M., & Gingeras, T. R. _STAR: ultrafast universal RNA-seq aligner_. Bioinformatics (Oxford, England), 29(1), 15–21, **2013**. https://doi.org/10.1093/bioinformatics/bts635
+
 > Sebastian Uhrig, Julia Ellermann, Tatjana Walther, Pauline Burkhardt, Martina Fröhlich, Barbara Hutter, Umut H. Toprak, Olaf Neumann, Albrecht Stenzinger, Claudia Scholl, Stefan Fröhling and Benedikt Brors. _Accurate and efficient detection of gene fusions from RNA sequencing data_. Genome Research. March 2021 31: 448-460; Published in Advance January 13, **2021**. https://doi.org/10.1101/gr.257246.119
+
 > Köster, J., Mölder, F., Jablonski, K. P., Letcher, B., Hall, M. B., Tomkins-Tinch, C. H., Sochat, V., Forster, J., Lee, S., Twardziok, S. O., Kanitz, A., Wilm, A., Holtgrewe, M., Rahmann, S., & Nahnsen, S. _Sustainable data analysis with Snakemake_. F1000Research, 10:33, 10, 33, **2021**. https://doi.org/10.12688/f1000research.29032.2.
