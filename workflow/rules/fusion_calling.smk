@@ -34,6 +34,7 @@ rule arriba:
             )
             else True
         ),
+        extra=lookup(within=config, dpath="params/arriba/extra", default="")
     threads: 1
     wrapper:
         "v9.0.0/bio/arriba"
