@@ -39,6 +39,7 @@ genome_name = f"genome.{datatype_genome}.{species}.{build}.{release}"
 
 # define final output of workflow
 
+
 def final_output(wildcards):
     final_output = expand(
         "<results>/arriba_fusions/{sample}/{sample}.tsv", sample=samples["sample_name"]
@@ -47,6 +48,7 @@ def final_output(wildcards):
 
 
 # helper functions
+
 
 def extract_unique_sample_column_value(sample, col_name):
     result = samples.loc[samples["sample_name"] == sample, col_name].drop_duplicates()
@@ -92,6 +94,7 @@ def is_paired_end(sample):
 
 
 # input functions
+
 
 def get_optional_arriba_inputs(wildcards):
     optional_arriba_inputs = dict()
