@@ -38,3 +38,40 @@ rule arriba:
     threads: 1
     wrapper:
         "v9.0.0/bio/arriba"
+
+
+rule draw_fusions:
+    input:
+        fusions="<results>/arriba_fusions/{sample}/{sample}.tsv",
+        annotation=f"<resources>/{genome_name}.gtf",
+        alignments="<results>/star_align/{sample}/{sample}.sorted_by_coordinate.bam",
+    output:
+        plots="<results>/arriba_fusions/{sample}/{sample}.fusion_plots.pdf",
+    log:
+        "<logs>/arriba_fusions/{sample}/{sample}.fusion_plots.log",
+    conda:
+        "../envs/arriba.yaml"
+    params:
+        genome_version=branch(
+            condition=lookup(
+                within=config,
+                dpath="ref/build",
+            ),
+            cases={
+                "GRCh37" : "hg19_hs37d5_GRCh37",
+                "GRCh38" : "hg38_GRCh38",
+                "GRCm38" : "mm10_GRCm38",
+                "GRCm39" : "mm39_GRCm39",
+            },
+        ),
+    shell:
+        '( ARRIBA_RESOURCES_DIR="${{CONDA_PREFIX}}/var/lib/arriba" ; '
+        '  ARRIBA_VERSION=$( arriba -h | grep "Version: " | grep -o -P "\d+\.\d+\.\d+" ) ; '
+        "  draw_fusions.R "
+        "   --fusions={input.fusions} "
+        "   --annotation={input.annotation} "
+        "   --output={output.plots} "
+        "   --alignments={input.alignments} "
+        "   --cytobands=${{ARRIBA_RESOURCES_DIR}}/cytobands_{params.genome_version}_v${{ARRIBA_VERSION}}.tsv "
+        "   --proteinDomains=${{ARRIBA_RESOURCES_DIR}}/protein_domains_{params.genome_version}_v${{ARRIBA_VERSION}}.gff3 "
+        ") >{log} 2>&1 "
