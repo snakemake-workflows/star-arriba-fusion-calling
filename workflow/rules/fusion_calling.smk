@@ -40,11 +40,26 @@ rule arriba:
         "v9.0.0/bio/arriba"
 
 
+rule index_fusion_bams:
+    input:
+        alignments="<results>/star_align/{sample}/{sample}.sorted_by_coordinate.bam",
+    output:
+        index="<results>/star_align/{sample}/{sample}.sorted_by_coordinate.bam.bai",
+    log:
+        "<logs>/star_align/{sample}/{sample}.sorted_by_coordinate.index.log",
+    params:
+        extra="",  # optional params string
+    threads: 4  # This value - 1 will be sent to -@
+    wrapper:
+        "v8.1.1/bio/samtools/index"
+
+
 rule draw_fusions:
     input:
         fusions="<results>/arriba_fusions/{sample}/{sample}.tsv",
         annotation=f"<resources>/{genome_name}.gtf",
         alignments="<results>/star_align/{sample}/{sample}.sorted_by_coordinate.bam",
+        index="<results>/star_align/{sample}/{sample}.sorted_by_coordinate.bam.bai",
     output:
         plots="<results>/arriba_fusions/{sample}/{sample}.fusion_plots.pdf",
     log:
