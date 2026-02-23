@@ -43,10 +43,10 @@ genome_name = f"genome.{datatype_genome}.{species}.{build}.{release}"
 def final_output(wildcards):
     final_output = expand(
         [
-            "<results>/arriba_fusions/{sample}/{sample}.tsv", 
-            "<results>/arriba_fusions/{sample}/{sample}.fusion_plots.pdf", 
+            "<results>/arriba_fusions/{sample}/{sample}.tsv",
+            "<results>/arriba_fusions/{sample}/{sample}.fusion_plots.pdf",
         ],
-        sample=samples["sample_name"]
+        sample=samples["sample_name"],
     )
     return final_output
 

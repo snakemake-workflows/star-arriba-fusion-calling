@@ -58,10 +58,10 @@ rule draw_fusions:
                 dpath="ref/build",
             ),
             cases={
-                "GRCh37" : "hg19_hs37d5_GRCh37",
-                "GRCh38" : "hg38_GRCh38",
-                "GRCm38" : "mm10_GRCm38",
-                "GRCm39" : "mm39_GRCm39",
+                "GRCh37": "hg19_hs37d5_GRCh37",
+                "GRCh38": "hg38_GRCh38",
+                "GRCm38": "mm10_GRCm38",
+                "GRCm39": "mm39_GRCm39",
             },
         ),
     shell:
