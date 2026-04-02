@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.0.0 (2026-04-02)
+
+
+### Features
+
+* add arriba fusion plotting ([6872f5e](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/6872f5e28ed3313df2cd72699b51d4a7ef5682e5))
+* initial version with working `.test/` setup for `--dryrun` ([285bacc](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/285bacc3b1d33d77641757f805f797ba2d86bb67))
+
+
+### Bug Fixes
+
+* actually use params: arriba: extra: entries in arriba rule ([a56d99a](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/a56d99a42d734d4f958501c96e217de75b90fb2e))
+* add BAM indexing for fusion drawing ([8698687](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/8698687383d430c4902dac1077d39064deec2eda))
+* remove newlines from star align extra arguments ([9dbee9f](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/9dbee9f8653692255a9eb48a099cc4fe9b2825fa))
+* samples.schema.yaml copy-pasta leftover ([f19658d](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/f19658ddfae807adf8b5f51b1450a0513301a25b))
+* sv_file lookup in common.smk ([8ae06c8](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/8ae06c8144ff4fbea0b20c9a3c7e1c6f49953692))
+
 ## [1.1.0](https://github.com/snakemake-workflows/snakemake-workflow-template/compare/v1.0.0...v1.1.0) (2025-07-29)
 
 
