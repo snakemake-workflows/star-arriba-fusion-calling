@@ -113,7 +113,7 @@ def get_optional_arriba_inputs(wildcards):
     # optional file with known structural variants, specified via sv_file
     # column in sample_sheet TSV file
     if "sv_file" in samples.columns:
-        sv_file = samples.loc[f"sample_name == '{wildcards.sample}'", "sv_file"]
+        sv_file = samples.at[wildcards.sample, "sv_file"]
         if sv_file:
             optional_arriba_inputs["sv_file"] = sv_file
     return optional_arriba_inputs
