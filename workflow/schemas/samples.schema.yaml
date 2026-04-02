@@ -40,7 +40,7 @@ properties:
       - fusions,variants
       - variants,fusions
     description: datatype of sample
-  calling:
+  sv_file:
     type: string
     description: (optional) file with known structural variants, for example from whole genome sequencing. See https://github.com/suhrig/arriba/wiki/04-Input-files#structural-variant-calls-from-wgs
 
