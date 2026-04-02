@@ -1,2 +1,2 @@
-sample_name	group	alias	platform	datatype	calling
-sample_1	one	tumor	ILLUMINA	dna	fusions
+sample_name	group	alias	platform	datatype	calling	sv_file
+sample_1	one	tumor	ILLUMINA	dna	fusions	resources/sample_1.example_wgs_file.vcf
