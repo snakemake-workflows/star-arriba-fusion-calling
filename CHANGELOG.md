@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/snakemake-workflows/star-arriba-fusion-calling/compare/v1.0.0...v1.0.1) (2026-04-07)
+
+
+### Bug Fixes
+
+* clean up schemas and sheets, add meaningful config/README.md ([e1d3d60](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/e1d3d6028a828eb7e2729489cc6212bcf009cb66))
+
 ## [1.1.0](https://github.com/snakemake-workflows/snakemake-workflow-template/compare/v1.0.0...v1.1.0) (2025-07-29)
 
 
