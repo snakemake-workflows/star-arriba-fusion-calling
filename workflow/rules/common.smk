@@ -122,10 +122,10 @@ def get_optional_arriba_inputs(wildcards):
 def get_star_reads_input(wildcards, r2=False):
     match (bool(is_paired_end(wildcards.sample)), r2):
         case (True, False):
-            return "<results>/merged/{sample}_R1.fastq.gz"
+            return units.loc[wildcards.sample, "fq1"]
         case (True, True):
-            return "<results>/merged/{sample}_R2.fastq.gz"
+            return units.loc[wildcards.sample, "fq2"]
         case (False, False):
-            return "<results>/merged/{sample}_single.fastq.gz"
+            return units.loc[wildcards.sample, "fq1"]
         case (False, True):
             return []
