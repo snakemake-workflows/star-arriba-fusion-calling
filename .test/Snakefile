@@ -28,8 +28,8 @@ rule testing_all:
 
 rule download_test_data:
     output:
-        fq1="<results>/merged/{sample}_R1.fastq.gz",
-        fq2="<results>/merged/{sample}_R2.fastq.gz",
+        fq1="<results>/test_fq/{sample}.R1.fq.gz",
+        fq2="<results>/test_fq/{sample}.R2.fq.gz",
     log:
         "<logs>/data_download/{sample}.download.log",
     params:
