@@ -17,9 +17,6 @@ properties:
   fq2:
     type: string
     description: path to second FASTQ file (leave empty in case of single-end)
-  sra:
-    type: string
-    description: SRA id for automatic download of unit
 
 required:
   - sample_name

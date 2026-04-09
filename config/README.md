@@ -41,7 +41,5 @@ For each sample, add one or more sequencing units (runs, lanes or replicates) to
 * For each unit, you need to specify either of these columns:
   * `fq1` only for single end reads. This can point to any FASTQ file on your system
   * `fq1` and `fq2` for paired end reads. These can point to any FASTQ files on your system
-  * `sra` only: specify an SRA (sequence read archive) accession (starting with e.g. ERR or SRR). The pipeline will automatically download the corresponding paired end reads from SRA.
-  * If both local files (`fq1`, `fq2`) and SRA accession (`sra`) are available, the local files will be used.
 
 Missing values can be specified by empty columns or by writing `NA`. Lines can be commented out with `#`.
