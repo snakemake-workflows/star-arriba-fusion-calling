@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.2](https://github.com/snakemake-workflows/star-arriba-fusion-calling/compare/v1.0.1...v1.0.2) (2026-04-09)
+
+
+### Bug Fixes
+
+* do proper units sheet lookup for star alignment ([3f70cd1](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/3f70cd1bb20e30308ca7902e4e82c684eec94604))
+* remove unsupported SRA download option ([7b8acdb](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/7b8acdbde7ce61142301636afeac4c3a8844da01))
+* star input function ([7d83cd5](https://github.com/snakemake-workflows/star-arriba-fusion-calling/commit/7d83cd57e3649179bc06f6973b08b1cf536c2acb))
+
 ## [1.0.1](https://github.com/snakemake-workflows/star-arriba-fusion-calling/compare/v1.0.0...v1.0.1) (2026-04-07)
 
 
